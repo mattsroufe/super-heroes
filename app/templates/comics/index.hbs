@@ -1,0 +1,12 @@
+<h1>Comics</h1>
+<div class="comic-list">
+  {{#each model as |comic|}}
+    <div class="comic">
+      {{#link-to 'comics.show' comic.id}}
+        <img src="{{comic.thumbnail.path}}.{{comic.thumbnail.extension}}">
+      {{/link-to}}
+      <p><strong>{{comic.title}}</strong></p>
+    </div>
+  {{/each}}
+</div>
+

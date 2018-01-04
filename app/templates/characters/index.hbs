@@ -1,5 +1,10 @@
 <h1>Characters</h1>
 
-{{#each model as |character|}}
-  <p>{{character.name}}</p>
-{{/each}}
+<div class="character-list">
+  {{#each model as |character|}}
+    <div class="character">
+      <img src="{{character.thumbnail.path}}.{{character.thumbnail.extension}}">
+      <p><strong>{{character.name}}</strong></p>
+    </div>
+  {{/each}}
+</div>

@@ -3,7 +3,9 @@
 <div class="character-list">
   {{#each model as |character|}}
     <div class="character">
-      <img src="{{character.thumbnail.path}}.{{character.thumbnail.extension}}">
+      {{#link-to 'characters.show' character.id}}
+        <img src="{{character.thumbnail.path}}.{{character.thumbnail.extension}}">
+      {{/link-to}}
       <p><strong>{{character.name}}</strong></p>
     </div>
   {{/each}}

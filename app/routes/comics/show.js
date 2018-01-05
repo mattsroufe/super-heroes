@@ -1,11 +1,11 @@
-import Ember from 'ember';
 import Route from '@ember/routing/route';
+import $ from 'jquery';
 
 export default Route.extend({
   activate: function() {
-    Ember.$('body').addClass('dark');
+    $('body').addClass('dark');
   },
   deactivate: function() {
-    Ember.$('body').removeClass('dark');
+    $('body').removeClass('dark');
   }
 });
